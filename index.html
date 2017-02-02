@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>中冶赛迪前端测试题</title>
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="https://cdn.staticfile.org/materialize/0.97.8/css/materialize.min.css"  media="screen,projection"/> 
+<link rel="stylesheet" href="https://cdn.staticfile.org/fullPage.js/2.9.2/jquery.fullPage.css">
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<style>
+  body {
+    font-family: "Microsoft Yahei";
+  }
+  .mdi-navigation-menu {
+    padding: 25% 0;
+  }
+  thead {
+    color: white;
+    background: white;
+  }
+  .section img {
+    width: 100%;
+    overflow: hidden;
+    height: 93%;
+    margin-top: -5%;
+  }
+  #menu{
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    width: 90px;
+    margin: -160px 0 0;
+    padding: 0;
+    list-style-type: none;
+    z-index: 70;
+  }
+
+  #menu li {
+    margin-top: 10px;
+ 
+  }
+  #menu a {
+    display: block;
+    padding: 10px 0;
+    background-color: #ff6e40;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+  #menu .active a {
+    color: #fff;
+    background-color: rgb(0, 116, 234);
+  }
+  .table-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    z-index: 0;
+    position: relative;
+    top: -8%;
+  }
+  #modal-chart {
+    height: 500px;
+  }
+
+  #modal1 span {
+    font: 1.5rem;
+    margin-left: 1.5rem;
+    line-height: 2rem;  
+  }
+  .thTool {
+    position: relative;
+  }
+  .my-ul {
+    position: absolute;
+    top: 50%;
+    z-index: 999px;
+    width: 100%;
+    left: 0;
+    color: white;
+    display: none;
+    font-size: 1.15rem;
+   
+  }
+  .pagination {
+    margin: 0 auto;
+  }
+  .my-li {
+    height: 50%;
+    padding: 5px;
+  }
+  .my-a img{
+    position: relative;
+    top: 0.85rem;
+    height: 36px;
+    width: 36px;
+  }
+  .li-chart a {
+    color: white;
+  }
+  .info-header {
+    background-color: #212121;
+    color: white;
+    font: 1.15rem/3rem "Microsoft Yahei";
+    border-left: 1rem;
+    height: 3rem;
+  }
+  .info-header span {
+    margin-left: 1rem;
+  }
+  .parallax-container {
+    height: 700px;
+  }
+  .section2 {
+    overflow: auto;
+  }
+  #nav-bar {
+    background-color: #263238;
+   
+  }
+  .section1 {
+    background-image: url(http://static.leiphone.com/uploads/new/article/pic/201607/577df1e359713.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    font-size: 3rem;
+   
+  }
+  .section3 {
+    background-image: url(http://image.pstune.com/photos/tkpq2d617hn/e9qswwfvls6_middle.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .section3 div {
+    position: relative;
+    left: 1.5rem;
+    top: -13%;
+  }
+  .section1 div {
+    position: absolute;
+    top: 4%;
+    right: 5%;
+  }
+
+</style>
+</head>
+
+<body>
+<!-- 侧边导航菜单 -->
+<ul id="menu">
+   <li data-menuanchor="page1" class="active z-depth-3"><a href="#page1">首页</a></li>
+   <li data-menuanchor="page2" class="z-depth-3"><a href="#page2">表格展示</a></li>
+   <li data-menuanchor="page3" class="z-depth-3"><a href="#page3">加法函数展示</a></li>
+</ul>
+
+<!-- 导航    -->
+<div class="navbar-fixed">
+ <nav id="nav-bar">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo center">CISDI</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"><img src="icons/ic_menu_white_36px.svg" alt=""></i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#page1" >首页</a></li>
+            <li><a href="#page2">表格页</a></li>
+            <li><a href="#page3">加法函数</a></li>
+            <li><a href="http://aizys.win/MyResume">关于我</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="#page1">首页</a></li>
+            <li><a href="#page2">表格页</a></li>
+            <li><a href="#page3">加法函数</a></li>
+            <li><a href="http://aizys.win/MyResume">关于我</a></li>
+          </ul>
+        </div>
+      </nav>
+</div>
+
+<!-- fullpage分页 -->
+<div id="dowebok">
+    <div class="section section1">
+        <div>
+          <h3>中冶赛迪前端测试题成果展示</h3>
+          <h4>请点击导航或右侧菜单查看</h4>
+          <h5>想了解我的更多信息，请点击导航栏中的“关于我”</h5>
+        </div>
+         <!--  <div><img class="responsive-img" src="http://static.leiphone.com/uploads/new/article/pic/201607/577df1e359713.jpg" alt=""></div> -->
+            
+    </div>
+    <div class="section section2">
+        <div class="table-wrapper">
+        <div class="table-info"></div>
+          <table class="centered bordered" id="tableid">
+            <thead>
+              <tr>
+                
+              </tr>
+            </thead>
+
+            <tbody id="tb">
+          
+            </tbody>
+          </table>          
+        </div>
+        <div class="row">
+          <div class="col s12 center-align">
+             <ul class="pagination" style="cursor:pointer">
+                <li class=""><a class="prev-page"><</a></li>
+                <li class=""><a class="first-page">首页</a></li>
+                <li>
+                  <ul>
+                    <li class="active"><a class="page-a">1</a></li>
+                    <li class=""><a class="page-a">2</a></li>
+                    <li class=""><a class="page-a">3</a></li>
+                    <li class=""><a class="page-a">4</a></li>
+                    <li class=""><a class="page-a">5</a></li>
+                    <li class="">...</li>                   
+                  </ul>
+
+                </li>
+
+                <li class=""><a class="last-page">末页</a></li>
+                <li class=""><a class="next-page">></a></li>
+                <li class="totalPage"><a href=""></a></li>
+            </ul> 
+          </div>
+        </div>
+    </div>
+    <div class="section section3">
+      <div>
+          <h4>请按F12进入开发者模式的控制台（console），并进行加法函数的运算。如:</h4><br>
+          <h5>输入CISDI_Cal (0).toString() 并回车    -->输出0  </h5>
+          <h5>输入CISDI_Cal (0)(1).toString() 并回车    -->输出1 </h5>
+          <h5>输入CISDI_Cal (0)(1)(2).toString() 并回车    -->输出3</h5>
+          <h5>输入var v = CISDI_Cal (0)(1) ; v(2).toString()并回车     -->输出3</h5>
+      </div>
+
+    </div>
+</div>
+
+<!-- 模态框 -->
+
+  <div id="modal1" class="modal">
+  <div class="modal-header">
+    <div class="chart-info">
+      <div class="info-header"><span></span></div>
+      <div class="">
+        <span>分箱数：</span>
+        <select id="my-select" style="display: block;">
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+    </div>
+    <div id="modal-chart" class="modal-content">
+      
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">同意</a>
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">取消</a>
+  </div>
+</div>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>  
+<script src="https://cdn.staticfile.org/materialize/0.97.8/js/materialize.min.js"></script>
+<script src="https://cdn.staticfile.org/echarts/3.3.2/echarts.min.js"></script>
+<script src="https://cdn.staticfile.org/fullPage.js/2.9.2/jquery.fullPage.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script src="js/test-3.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
