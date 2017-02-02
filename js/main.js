@@ -2919,9 +2919,6 @@ $(document).ready(function () {
 
     // 删除功能
      function del(obj) {
-        obj.on('mouseover',function () {
-          $(this).parent().css('cursor','pointer');
-        })
         obj.on('click',function () {
           $(this).parent().css('display','none')            
           var thisOrder = $(this).parent().parent().index();
