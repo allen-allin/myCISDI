@@ -2942,7 +2942,8 @@ $(document).ready(function () {
         var num = aTr.length;//表格所有行数(所有记录数)
       
         //每页显示行数
-        var pageSize=0;   
+        var pageSize=0;
+        //当前窗口宽度   
         var nowWidth = $(window).width();
          
         //根据屏幕宽度不同  显示的行数不同
